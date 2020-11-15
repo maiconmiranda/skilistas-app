@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_11_15_044518) do
   enable_extension "plpgsql"
 
   create_table "accounts", force: :cascade do |t|
-    t.string "account_number", null: false
+    t.bigint "account_number", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.integer "mobile", null: false

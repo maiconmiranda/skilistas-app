@@ -1,0 +1,27 @@
+<%= form_with(model: account, class: "new-account-form") do |f| %>
+<%= f.label :first_name %>
+<%= f.text_field :first_name %>
+<%= f.label :last_name %>
+<%= f.text_field :last_name %>
+<%= f.label :mobile %>
+<%= f.text_field :mobile %>
+<%= f.label :address %>
+<%= f.text_field :address %>
+<%= f.label :postcode %>
+<%= f.text_field :postcode %>
+<%= f.label :suburb %>
+<%= f.text_field :suburb %>
+<%= f.label :social_media %>
+<%= f.text_field :social_media %>
+<%= f.fields_for :company do |company_form| %>
+<%= company_form.label :business_nam %>
+<%= company_form.text_field :business_name %>
+<%= company_form.label :abn %>
+<%= company_form.text_field :abn %>
+<%= company_form.label :phone %>
+<%= company_form.text_field :phone %>
+<%= company_form.label :website %>
+<%= company_form.text_field :website %>
+<% end %>
+<%= f.submit id: "submit" %>
+<% end %>
