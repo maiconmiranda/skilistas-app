@@ -3,7 +3,7 @@ class Account < ApplicationRecord
   has_one :company
   has_one :profile
   accepts_nested_attributes_for :company
-  # validates :account_number, length: { in: 1..9999999999 } 
+  accepts_nested_attributes_for :profile
   before_create :acc_number_rand
 
   def full_name 

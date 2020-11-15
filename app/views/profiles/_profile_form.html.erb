@@ -1,0 +1,17 @@
+<%= form_for @profile, local: true do |f| %>
+<% if @profile.errors.any? %>
+<ul>
+  <% @profile.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+  <% end %>
+</ul>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<%= f.label :description %>
+<%= f.text_area :description %>
+<%= f.label :locations %>
+<%= f.text_field :locations %>
+
+<%= f.submit id: "Create Profile" %>
+<% end %>

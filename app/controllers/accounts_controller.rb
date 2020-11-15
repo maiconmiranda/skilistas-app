@@ -29,7 +29,9 @@ class AccountsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
+    @profile.destroy
+    redirect_to root_path
   end
 
   private
