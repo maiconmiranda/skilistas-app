@@ -11,8 +11,7 @@
 <% if user_signed_in? &&  current_user.account.profile.blank? %>
 <%= link_to "Create Profile", new_profile_path %>
 <% else %>
-<%= link_to "Update Profile", edit_profile_path%>
-<%= link_to "Delete", profile_path, method: :delete %>
+<%= link_to "View Profile", profile_path(current_user.account.profile) %>
 <%end%>
 <%= link_to "Update Account", edit_account_path %>
 

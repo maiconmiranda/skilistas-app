@@ -30,7 +30,8 @@ class AccountsController < ApplicationController
   end
 
   def destroy
-    @profile.destroy
+    @account = current_user.account
+    @account.destroy 
     redirect_to root_path
   end
 

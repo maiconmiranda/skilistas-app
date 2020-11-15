@@ -1,2 +1,11 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
+<div>
+  <h1><%= @profile.title %></h1>
+  <p>Description: <%= @profile.description %></p>
+  <p>Locations: <%= @profile.locations %></p>
+</div>
+
+<%= link_to "Update Profile", edit_profile_path(@profile) %>
+<%= link_to "Delete Profile", profile_path, method: :delete %>
+
+
+<%= link_to "Back", root_path %>

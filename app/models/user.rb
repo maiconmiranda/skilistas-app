@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          enum role: { default: 0, contractor: 1, admin: 3 }
   
-  has_one :account
+  has_one :account, dependent: :destroy
 end
